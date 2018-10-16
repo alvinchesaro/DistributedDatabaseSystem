@@ -1,0 +1,24 @@
+﻿<Window x:Class="ddbapplication.Employees"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ddbapplication"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        Title="List of All Employees" Height="450" Width="800" Icon="Images/ddb.ico">
+    <Grid>
+        <DataGrid CanUserAddRows="False" IsReadOnly="True" x:Name="user_view" x:FieldModifier="public" AutoGenerateColumns="False" ColumnWidth="*" BorderBrush="#FFFF7F00" Margin="0,57" Background="White" Foreground="#FF1D1D1D">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Employee Id" Binding="{Binding emp_id}"/>
+                <DataGridTextColumn Header="Employee Role" Binding="{Binding emp_role}"/>
+                <DataGridTextColumn Header="Employee Commission" Binding="{Binding emp_commission}"/>
+                <DataGridTextColumn Header="Employee Phone Number" Binding="{Binding emp_phone}"/>
+                <DataGridTextColumn Header="Employee Name" Binding="{Binding emp_name}"/>
+                <DataGridTextColumn Header="Branch" Binding="{Binding emp_location}"/>
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+    </Grid>
+</Window>

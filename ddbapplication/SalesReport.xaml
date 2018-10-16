@@ -1,0 +1,22 @@
+﻿<Window x:Class="ddbapplication.SalesReport"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ddbapplication"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        Title="Company Sales Report" Height="450" Width="800" Icon="Images/ddb.ico">
+    <Grid>
+        <DataGrid CanUserAddRows="False" IsReadOnly="True" x:Name="user_view" x:FieldModifier="public" AutoGenerateColumns="False" ColumnWidth="*" BorderBrush="#FFFF7F00" Margin="0,57" Background="White" Foreground="#FF1D1D1D">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Sales Id" Binding="{Binding sales_id}"/>
+                <DataGridTextColumn Header="Item Id" Binding="{Binding item_id}"/>
+                <DataGridTextColumn Header="Number of Items Sold" Binding="{Binding no_sold}"/>
+                <DataGridTextColumn Header="Item Name" Binding="{Binding revenue}"/>
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+    </Grid>
+</Window>
